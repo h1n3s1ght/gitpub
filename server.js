@@ -17,5 +17,5 @@ app.get("/", (req, res) => {
 
 //Create a get route /drinks that will res.send(drinks), which will display your drinks data as json in the browser
 app.get("/drinks", (req, res) => {
-    res.send(drinks);
+    res.render('drinks_index.ejs', {drinks});
 })
