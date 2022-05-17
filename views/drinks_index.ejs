@@ -23,10 +23,41 @@
             margin: 0 auto;
             padding: 2%;
         }
+        ol {
+            display: flex;
+             background-color: #4C6663 ;
+             flex-direction: column;
+             align-items:center;
+             text-align: left;
+             margin-top: 0%;
+             margin-left: 15%;
+             margin-right: 15%;
+        }
+
+        li {
+           display: flex;
+             background-color: #4C6663 ;
+             flex-direction: column;
+             align-items:left;
+             padding: .25%;
+        }
+        a{
+            list-style-type: none;
+            text-decoration: none;
+            color:#a7e2e3;
+        }
+        a:hover {
+            color: black;
+        }
     </style>
     <title>Drinks List</title>
 </head>
 <body>
     <h1>Software Engineers Drink Too... Welcome to <strong>gitPub!</strong></h1>
+<ol>
+    <% for (let i = 0; i < drinks.length; i++){ %>
+        <li><a href="http://localhost:3000/drinks/<%= i%>"> <%= drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1) %></a></li>
+    <% } %>
+</ol>
 </body>
 </html>
