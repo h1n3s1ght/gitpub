@@ -14,3 +14,8 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
     res.send("Welcome to the GitPub App!")
 })
+
+//Create a get route /drinks that will res.send(drinks), which will display your drinks data as json in the browser
+app.get("/drinks", (req, res) => {
+    res.send(drinks);
+})
