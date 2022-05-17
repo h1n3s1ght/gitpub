@@ -19,3 +19,8 @@ app.get("/", (req, res) => {
 app.get("/drinks", (req, res) => {
     res.render('drinks_index.ejs', {drinks});
 })
+
+//Add a new get route for /drinks/:id
+app.get("/drinks/:id", (req, res) => {
+    res.send(req.params.id)
+})
