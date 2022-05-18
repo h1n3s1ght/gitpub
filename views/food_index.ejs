@@ -64,12 +64,12 @@
     <title>Drinks List</title>
 </head>
 <body>
-    <h1>Software Engineers Drink Too... Welcome to <strong>gitPub!</strong></h1>
+    <h1>Software Engineers Eat Yummy Food Too... Welcome to <strong>gitPub!</strong></h1>
 <ol>
-    <% for (let i = 0; i < drinks.length; i++){ %>
-        <li><a href="http://localhost:3000/drinks/<%= i%>"> <%= drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1) %></a></li>
+    <% for (let i = 0; i < food.length; i++){ %>
+        <li><a href="http://localhost:3000/food/<%= i%>"> <%= food[i].name.charAt(0).toUpperCase() + food[i].name.slice(1) %></a></li>
     <% } %>
 </ol>
-<p> Hungry? Click Here To See Our <a href="http://localhost:3000/food/"> Menu</a></p>
+<p> Thirsty? Click Here To See Our <a href="http://localhost:3000/drinks/"> Drinks</a></p>
 </body>
 </html>

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const drinks = require('./models/drinks');
+const food = require('./models/food');
 
 //Set the PORT to 3000
 const PORT = 3000;
@@ -23,4 +24,14 @@ app.get("/drinks", (req, res) => {
 //Add a new get route for /drinks/:id
 app.get("/drinks/:id", (req, res) => {
     res.render('drinks_show.ejs', {drinks: drinks[req.params.id]});
+})
+
+//Create a get route /drinks that will res.send(drinks), which will display your drinks data as json in the browser
+app.get("/food", (req, res) => {
+    res.render('food_index.ejs', {food});
+})
+
+//Add a new get route for /drinks/:id
+app.get("/food/:id", (req, res) => {
+    res.render('food_show.ejs', {food: food[req.params.id]});
 })
